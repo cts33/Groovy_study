@@ -1,0 +1,17 @@
+task hello{
+    doLast{
+        println "hello"
+    }
+}
+def myClosure(closure){
+    for (i in 0..<10) {
+        closure(i)
+    }
+}
+task testClosure{
+
+    myClosure{
+
+        println "result=$it"
+    }
+}
